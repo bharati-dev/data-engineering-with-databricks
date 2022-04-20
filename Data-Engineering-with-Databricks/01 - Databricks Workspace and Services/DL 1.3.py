@@ -90,8 +90,9 @@
 
 # COMMAND ----------
 
-assert my_name is not None, "Name is still None"
-print(my_name)
+# MAGIC %python
+# MAGIC assert my_name is not None, "Name is still None"
+# MAGIC print(my_name)
 
 # COMMAND ----------
 
@@ -102,7 +103,8 @@ print(my_name)
 
 # COMMAND ----------
 
-display(example_df)
+# MAGIC %python
+# MAGIC display(example_df)
 
 # COMMAND ----------
 
@@ -139,6 +141,22 @@ display(example_df)
 # COMMAND ----------
 
 # MAGIC %md
+# MAGIC 
+# MAGIC 
+# MAGIC # welcome to Databricks training
+# MAGIC 
+# MAGIC As part of this `training` you will understand:
+# MAGIC * Architecture 
+# MAGIC *  Basic concepts
+# MAGIC *  Create clusters
+# MAGIC *  Run notebooks
+# MAGIC 
+# MAGIC For more details go through:
+# MAGIC [Databricks documentation](<a href = "https://docs.databricks.com/" target= "_blank"> Databricks doc </a>)
+
+# COMMAND ----------
+
+# MAGIC %md
 # MAGIC ## Run a SQL cell
 # MAGIC 
 # MAGIC Run the following cell to query a Delta table using SQL. This executes a simple query against a table is backed by a Databricks-provided example dataset included in all DBFS installations.
@@ -155,8 +173,17 @@ display(example_df)
 
 # COMMAND ----------
 
-files = dbutils.fs.ls("/databricks-datasets/nyctaxi-with-zipcodes/subsampled")
-display(files)
+# MAGIC %python
+# MAGIC files = dbutils.fs.ls("/databricks-datasets/nyctaxi-with-zipcodes/subsampled")
+# MAGIC display(files)
+
+# COMMAND ----------
+
+display(dbutils.fs.ls("/databricks-datasets/nyctaxi-with-zipcodes/subsampled/_delta_log/"))
+
+# COMMAND ----------
+
+
 
 # COMMAND ----------
 
